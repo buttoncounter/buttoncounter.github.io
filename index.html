@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Button Counter</title>
+  </head>
+  <body>
+    <h1>Button Counter</h1>
+    <p>You have pressed the button <span id="count">0</span> times.</p>
+    <button id="button">Button</button>
+    <style>
+      body {
+        text-align: center;
+      }
+      button {
+        font-size: 24px;
+        padding: 10px;
+      }
+    </style>
+    
+  </body>
+</html>
+<script>
+  const button = document.getElementById('button');
+  const count = document.getElementById('count');
+  let numPresses = 0;
+
+  button.addEventListener('click', () => {
+    numPresses++;
+    count.textContent = numPresses;
+  });
+</script>
